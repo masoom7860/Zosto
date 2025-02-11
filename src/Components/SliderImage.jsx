@@ -1,4 +1,8 @@
 import Slider from "react-slick";
+import img1 from '../Assets/img1.jpg'
+import Button from 'react-bootstrap/Button';
+
+
 
 function SliderImage() {
     var Sliders = {
@@ -13,24 +17,26 @@ function SliderImage() {
             <div className="container">
                 <div className="row">
                     <Slider {...Sliders}>
-                        <div>
-                            <h3>1</h3>
-                            <img src="" alt="" />
+                        <div className="d-flex justify-contnt-around">
+
+                            <img src={img1} alt="" className="w-100" />
+                            <h1>Finally, personalized engagement made easy</h1>
+                            <p>Establish trust and capture attention with RCS from Twilio Messaging, without additional APIs to integrate and configure.</p>
+                            <Button variant="primary">Start For Free</Button>
+                            <a href="#" style={{color:'back'}}>see what's possible</a>
+                            <p>Free trial  |  No credit card required  |  Pay-as-you-go pricing</p>
                         </div>
                         <div>
-                            <h3>2</h3>
+                            <img src={img1} alt="" className="w-100" />
+
                         </div>
                         <div>
-                            <h3>3</h3>
+                            <img src={img1} alt="" className="w-100" />
+
                         </div>
                         <div>
-                            <h3>4</h3>
-                        </div>
-                        <div>
-                            <h3>5</h3>
-                        </div>
-                        <div>
-                            <h3>6</h3>
+                            <img src={img1} alt="" className="w-100" />
+
                         </div>
                     </Slider>
                 </div>

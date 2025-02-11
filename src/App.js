@@ -1,13 +1,13 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Pricing from './pages/Pricing';
+import PriceNav from './pages/PriceNav';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
     <div className="App">
-      <Pricing />
+      <PriceNav />
       <h1>Hello World</h1>
     </div>
   );
