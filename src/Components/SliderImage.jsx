@@ -1,48 +1,53 @@
+import React from "react";
 import Slider from "react-slick";
-import img1 from '../Assets/img1.jpg'
-import Button from 'react-bootstrap/Button';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import { Container } from "react-bootstrap";
 
-
-
-function SliderImage() {
-    var Sliders = {
+export default function SimpleSlider() {
+    const settings = {
         dots: true,
+        arrows: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-    }
-    return (
+        nextArrow: <button className="btn btn-primary">Next</button>,
+        prevArrow: <button className="btn btn-secondary">Prev</button>,
+      };
+
+  return (
+    <Container className="d-flex justify-content-center mt-4">
+      <Slider className="w-75 mx-auto" {...settings}>
         <div>
-            <div className="container">
-                <div className="row">
-                    <Slider {...Sliders}>
-                        <div className="d-flex justify-contnt-around">
-
-                            <img src={img1} alt="" className="w-100" />
-                            <h1>Finally, personalized engagement made easy</h1>
-                            <p>Establish trust and capture attention with RCS from Twilio Messaging, without additional APIs to integrate and configure.</p>
-                            <Button variant="primary">Start For Free</Button>
-                            <a href="#" style={{color:'back'}}>see what's possible</a>
-                            <p>Free trial  |  No credit card required  |  Pay-as-you-go pricing</p>
-                        </div>
-                        <div>
-                            <img src={img1} alt="" className="w-100" />
-
-                        </div>
-                        <div>
-                            <img src={img1} alt="" className="w-100" />
-
-                        </div>
-                        <div>
-                            <img src={img1} alt="" className="w-100" />
-
-                        </div>
-                    </Slider>
-                </div>
-            </div>
+          <img
+            src="https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="Slide 1"
+            className="img-fluid rounded"
+          />
         </div>
-    )
+        <div>
+          <img
+            src="https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="Slide 2"
+            className="img-fluid rounded"
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="Slide 3"
+            className="img-fluid rounded"
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="Slide 4"
+            className="img-fluid rounded"
+          />
+        </div>
+      </Slider>
+    </Container>
+  );
 }
-
-export default SliderImage
